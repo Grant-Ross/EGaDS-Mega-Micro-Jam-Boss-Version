@@ -13,7 +13,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameManager Instance => _instance ? _instance : _instance = FindObjectOfType<GameManager>() ;
+    public static GameManager Instance => _instance ? _instance : FindObjectOfType<GameManager>();
     public enum GameState
     {
         TitleScreen, MainGame, EndScreen
@@ -48,9 +48,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int roundsToWin;
     //public event Action OnMainGameStart;
-    
-
-
     private void Awake()
     {
         if (_instance == null) _instance = this;
